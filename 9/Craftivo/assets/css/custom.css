@@ -1,0 +1,214 @@
+:root {
+  --default-font: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --heading-font: "Playfair Display", serif;
+  --accent-color: #18d26e;
+}
+
+body {
+  font-family: var(--default-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+h3 {
+  color: #38dc06da;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.contact .php-email-form button[type=submit] {
+  color: #fff;
+  background: #2ecc71;
+  border: 2px solid #27ae60;
+  padding: 12px 35px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.contact .php-email-form button[type=submit]:active {
+  background: #1e8449;
+  transform: scale(0.97);
+}
+
+#navmenu ul li a {
+  padding: 8px 16px;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  background-color: rgba(24,210,110,0.1);
+  color: #fff !important;
+  transition: 0.25s;
+}
+
+#navmenu ul li a:hover,
+#navmenu ul li a.active {
+  background-color: var(--accent-color);
+  color: #000 !important;
+  transform: translateY(-2px);
+}
+
+.about, .resume, .portfolio, .services {
+  padding: 70px 0;
+}
+
+.about .container > *,
+.resume .container > *,
+.portfolio .container > * {
+  margin-bottom: 20px;
+}
+
+.about .container > *,
+.resume .container > *,
+.portfolio .container > * {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.scroll-top {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #000;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 12px rgba(24,210,110,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.scroll-top i {
+  font-size: 22px;
+  color: var(--accent-color);
+}
+
+.scroll-top:hover {
+  background: var(--accent-color);
+  box-shadow: 0 0 18px rgba(24,210,110,0.9);
+}
+
+.scroll-top:hover i {
+  color: #000;
+}
+
+.skills .progress-bar-wrap {
+  background: #0a0a0a;
+  height: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(24,210,110,0.35);
+}
+
+.skills .progress-bar {
+  background: linear-gradient(90deg, #18d26e, #4eff9c);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(24,210,110,0.6);
+}
+
+ul.custom-ul {
+  list-style: none;
+}
+
+ul.custom-ul li {
+  position: relative;
+  padding-left: 12px;
+}
+
+ul.custom-ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+ul.custom-ul ul li::before {
+  content: "–";
+}
+
+ol.custom-ol {
+  counter-reset: nr;
+}
+
+ol.custom-ol li {
+  counter-increment: nr;
+  position: relative;
+  padding-left: 16px;
+}
+
+ol.custom-ol li::before {
+  content: counter(nr) ")";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+ol.custom-ol ol {
+  counter-reset: child;
+}
+
+ol.custom-ol ol li {
+  counter-increment: child;
+}
+
+ol.custom-ol ol li::before {
+  content: counter(child, upper-alpha) ")";
+}
+
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.services-table th,
+.services-table td {
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid #222;
+}
+
+.services-table thead th {
+  background: var(--accent-color);
+  color: #000;
+  text-transform: uppercase;
+}
+
+.services-table tbody tr:nth-child(even) {
+  background: #101010;
+}
+
+.services-table tbody tr {
+  transition: background 0.25s ease;
+}
+
+.services-table tbody tr:hover {
+  background: #181818;
+}
